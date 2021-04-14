@@ -9,7 +9,7 @@ const Card = ({title, img, authors, link, dataid, desc}) => {
         <h5 className="card-title">{title}</h5>
         <p className="card-text">Authors: {authors}</p>
         <p className="card-text">Description: {desc}</p>
-        <a href={link} target="_blank" rel="noreferrer" className="btn btn-primary">Link to buy</a>
+        <a href={link} target="_blank" rel="noreferrer" className="btn btn-primary">Link</a>
       </div>
     </div>
   )

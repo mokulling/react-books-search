@@ -1,10 +1,7 @@
 import React, { useState } from 'react'
-import Container from '../components/container/container'
-import Row from '../components/row/row'
-import Col from '../components/col/col'
-import BookSearch from '../components/bookSearch/bookSearch'
+import {Col, Container, Row} from 'react-bootstrap'
 import axios from 'axios'
-import Card from '../components/card/card'
+import Card from '../components/card'
 import API from "../utils/API"
 
 const Home = () => {
@@ -45,9 +42,6 @@ const Home = () => {
   return (
     <Container>
       <Row>
-        <BookSearch
-          onSubmit={handleForm}
-          name="search" />
       </Row>
       <Row>
         {books.map((book) => (

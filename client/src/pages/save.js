@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import Container from '../components/container/container'
-import SavedCard from '../components/savedCards/savedcard'
-import Row from '../components/row/row'
-import Col from '../components/col/col'
+import {Row, Col, Container} from 'react-bootstrap'
 import API from '../utils/API'
+import Card from '../components/card'
 const Save = () => {
   const [savedBooks, setSavedBooks] = useState([])
 
@@ -30,7 +28,7 @@ const Save = () => {
           "No saved books"
           : savedBooks.map((book) => (
             <Col className="col" onClick={handleDeleteClick} key={book._id}>
-              <SavedCard
+              <Card
                 title={book.title}
                 img={
                   book.img === undefined
